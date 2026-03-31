@@ -13,7 +13,7 @@ const Footer = () => {
           </a>
         </div>
         <p className="text-gray-600 dark:text-gray-400">
-          © 2024 MOHO TECHS. All rights reserved.
+          © 2026 MOHO TECHS. All rights reserved.
         </p>
       </div>
     </footer>
