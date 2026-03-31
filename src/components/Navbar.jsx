@@ -1,0 +1,76 @@
+import { useState, useEffect } from 'react';
+import { FaSun, FaMoon } from 'react-icons/fa';
+
+const Navbar = ({ activeSection, onNavItemClick }) => {
+  const [darkMode, setDarkMode] = useState(false);
+
+  useEffect(() => {
+    const theme = localStorage.getItem('theme');
+    if (theme === 'dark') {
+      setDarkMode(true);
+      document.documentElement.classList.add('dark');
+    }
+  }, []);
+
+  const toggleDarkMode = () => {
+    setDarkMode(!darkMode);
+    if (!darkMode) {
+      document.documentElement.classList.add('dark');
+      localStorage.setItem('theme', 'dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+      localStorage.setItem('theme', 'light');
+    }
+  };
+
+  const links = [
+    { label: 'Home', id: 'home' },
+    { label: 'About', id: 'about' },
+    { label: 'Services', id: 'services' },
+    { label: 'Projects', id: 'projects' },
+    { label: 'Pricing', id: 'pricing' },
+    { label: 'Contact', id: 'contact' }
+  ];
+
+  return (
+    <nav className="bg-white dark:bg-gray-800 shadow-md fixed w-full z-10">
+      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
+        <button onClick={() => onNavItemClick('home')} className="flex items-center gap-3 focus:outline-none">
+          <img
+            src="/images/image.png"
+            alt="MOHO TECHS logo"
+            className="h-10 w-10 object-contain"
+          />
+          <span className="text-xl font-bold text-blue-600 dark:text-blue-400">MOHO TECHS</span>
+        </button>
+
+        <div className="flex items-center space-x-4">
+          {links.map((link) => (
+            <button
+              key={link.id}
+              onClick={() => onNavItemClick(link.id)}
+              className={`relative px-2 py-1 text-sm font-medium transition duration-300 focus:outline-none ${
+                activeSection === link.id
+                  ? 'text-blue-600 dark:text-blue-300'
+                  : 'text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-300'
+              }`}
+            >
+              {link.label}
+              <span
+                className={`absolute left-0 -bottom-1 h-0.5 bg-blue-600 dark:bg-blue-300 transition-all duration-300 ${
+                  activeSection === link.id ? 'w-full' : 'w-0'
+                }`}
+              />
+            </button>
+          ))}
+
+          <button onClick={toggleDarkMode} className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
+            {darkMode ? <FaSun /> : <FaMoon />}
+          </button>
+        </div>
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;
