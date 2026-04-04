@@ -29,7 +29,7 @@ const Contact = ({ id = 'contact' }) => {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-bold text-center mb-12"
+          className="text-3xl md:text-4xl font-bold text-center mb-12 px-4"
         >
           Contact Me
         </motion.h1>
@@ -37,9 +37,9 @@ const Contact = ({ id = 'contact' }) => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="max-w-md mx-auto"
+          className="max-w-md mx-auto px-4"
         >
-          <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-800 p-8 rounded-lg shadow-md">
+          <form onSubmit={handleSubmit} className="bg-white dark:bg-gray-800 p-6 md:p-8 rounded-lg shadow-md">
             <div className="mb-4">
               <label htmlFor="name" className="block text-sm font-medium mb-2">
                 Name

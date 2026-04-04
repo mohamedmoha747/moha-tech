@@ -6,7 +6,7 @@ const Pricing = ({ id = 'pricing' }) => {
     {
       name: 'Basic Website',
       price: '3000',
-      currency: 'INR',
+      currency: '₹',
       features: [
         'Responsive Design',
         'Up to 5 Pages',
@@ -37,7 +37,7 @@ const Pricing = ({ id = 'pricing' }) => {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-bold text-center mb-12"
+          className="text-3xl md:text-4xl font-bold text-center mb-12 px-4"
         >
           Pricing Plans
         </motion.h1>

@@ -14,7 +14,7 @@ const About = ({ id = 'about' }) => {
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-4xl font-bold text-center mb-8"
+          className="text-3xl md:text-4xl font-bold text-center mb-8"
         >
           About Me
         </motion.h1>
@@ -22,9 +22,9 @@ const About = ({ id = 'about' }) => {
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
-          className="max-w-2xl mx-auto text-center mb-12"
+          className="max-w-2xl mx-auto text-center mb-12 px-4"
         >
-          <p className="text-lg leading-relaxed">
+          <p className="text-base md:text-lg leading-relaxed">
             I am a passionate MERN Stack Developer with experience in building full-stack web applications using MongoDB, Express.js, React.js, and Node.js. I focus on clean code, performance, and user-friendly design.
           </p>
         </motion.div>
@@ -32,9 +32,9 @@ const About = ({ id = 'about' }) => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5, delay: 0.4 }}
-          className="text-center"
+          className="text-center px-4"
         >
-          <h2 className="text-2xl font-semibold mb-6">Skills</h2>
+          <h2 className="text-xl md:text-2xl font-semibold mb-6">Skills</h2>
           <div className="flex flex-wrap justify-center gap-4">
             {skills.map((skill, index) => (
               <motion.span
