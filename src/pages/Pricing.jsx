@@ -18,7 +18,7 @@ const Pricing = ({ id = 'pricing' }) => {
     {
       name: 'Advanced Website with Admin Dashboard',
       price: '5000',
-      currency: 'INR',
+      currency: '₹',
       features: [
         'Everything in Basic',
         'Admin Dashboard',
