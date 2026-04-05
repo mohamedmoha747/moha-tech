@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
+import emailjs from '@emailjs/browser';
+import { FaWhatsapp } from 'react-icons/fa';
 
 const Contact = ({ id = 'contact' }) => {
   const [formData, setFormData] = useState({
@@ -17,9 +19,26 @@ const Contact = ({ id = 'contact' }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    alert('Message sent! (This is a demo)');
+    // Replace these with your actual EmailJS IDs from https://www.emailjs.com/
+    const serviceId = 'your_service_id';
+    const templateId = 'your_template_id';
+    const publicKey = 'your_public_key';
+
+    emailjs.send(serviceId, templateId, {
+      from_name: formData.name,
+      from_email: formData.email,
+      message: formData.message,
+      to_email: 'info.mohotechsolution@gmail.com'
+    }, publicKey)
+      .then((response) => {
+        console.log('Email sent successfully!', response);
+        alert('Message sent successfully!');
+        setFormData({ name: '', email: '', message: '' });
+      })
+      .catch((error) => {
+        console.error('Failed to send email:', error);
+        alert('Failed to send message. Please try again.');
+      });
   };
 
   return (
@@ -89,6 +108,17 @@ const Contact = ({ id = 'contact' }) => {
               Send Message
             </button>
           </form>
+          <div className="mt-6 text-center">
+            <p className="text-gray-600 dark:text-gray-400 mb-4">Or contact me directly:</p>
+            <a
+              href="https://wa.me/918124224680?text=Hello%20Mohamed,%20I%20would%20like%20to%20discuss%20a%20project."
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors duration-200"
+            >
+              <FaWhatsapp size={20} /> Contact me on WhatsApp
+            </a>
+          </div>
         </motion.div>
       </div>
     </section>

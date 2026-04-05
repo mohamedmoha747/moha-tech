@@ -51,7 +51,7 @@ const Footer = () => {
                 Call Now
               </a>
               <p className="text-sm md:text-base">
-                <a href="info.mohatechs@gmail.com" className="hover:text-white">info.mohatechs@gmail.com</a>
+                <a href="mailto:info.mohotechsolution@gmail.com" className="hover:text-white">info.mohotechsolution@gmail.com</a>
               </p>
               <div className="flex items-center gap-4 mt-3">
                 <a href="https://github.com/mohamedmoha747" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white">
