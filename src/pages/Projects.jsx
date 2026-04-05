@@ -50,7 +50,25 @@ const Projects = ({ id = 'projects' }) => {
                 {project.icon}
               </div>
               <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-              <p className="text-gray-600 dark:text-gray-400">{project.description}</p>
+              <p className="text-gray-600 dark:text-gray-400 mb-4">{project.description}</p>
+              <div className="flex flex-wrap gap-3">
+                <a
+                  href={project.github}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-white bg-blue-600 rounded-lg hover:bg-blue-700 transition-colors duration-200"
+                >
+                  <FaGithub /> GitHub
+                </a>
+                <a
+                  href={project.liveDemo}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center justify-center gap-2 px-4 py-2 text-sm font-medium text-blue-600 bg-blue-100 rounded-lg hover:bg-blue-200 dark:text-blue-300 dark:bg-blue-900 dark:hover:bg-blue-800 transition-colors duration-200"
+                >
+                  <FaExternalLinkAlt /> Live Demo
+                </a>
+              </div>
             </motion.div>
           ))}
         </div>
