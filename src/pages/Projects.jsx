@@ -1,22 +1,28 @@
 import { motion } from 'framer-motion';
-import { FaDumbbell, FaTint, FaUtensils } from 'react-icons/fa';
+import { FaDumbbell, FaTint, FaUtensils, FaGithub, FaExternalLinkAlt } from 'react-icons/fa';
 
 const Projects = ({ id = 'projects' }) => {
   const projects = [
     {
       icon: <FaDumbbell />,
       title: 'Gym Management System',
-      description: 'Admin dashboard with user management and analytics'
+      description: 'Admin dashboard with user management and analytics',
+      github: 'https://github.com/your-username/gym-management-system',
+      liveDemo: 'https://your-demo-url.com/gym-management'
     },
     {
       icon: <FaTint />,
       title: 'Blood Bank Management System',
-      description: 'Donor management with SMS notification system'
+      description: 'Donor management with SMS notification system',
+      github: 'https://github.com/your-username/blood-bank-management',
+      liveDemo: 'https://your-demo-url.com/blood-bank'
     },
     {
       icon: <FaUtensils />,
       title: 'Restaurant Management System',
-      description: 'QR-based ordering system with real-time updates'
+      description: 'QR-based ordering system with real-time updates',
+      github: 'https://github.com/your-username/restaurant-management',
+      liveDemo: 'https://your-demo-url.com/restaurant-management'
     }
   ];
 
