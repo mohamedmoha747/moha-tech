@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import emailjs from '@emailjs/browser';
 import { FaWhatsapp } from 'react-icons/fa';
@@ -9,6 +9,16 @@ const Contact = ({ id = 'contact' }) => {
     email: '',
     message: ''
   });
+  const [loading, setLoading] = useState(false);
+
+  const serviceId = 'service_56hnyai';
+  const templateId = 'template_ms0ra8g';
+  const publicKey = '9C3Dz5b6Wv33B5mKg';
+  const adminEmail = 'info.mohotechsolution@gmail.com';
+
+  useEffect(() => {
+    emailjs.init(publicKey);
+  }, []);
 
   const handleChange = (e) => {
     setFormData({
@@ -19,25 +29,30 @@ const Contact = ({ id = 'contact' }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // Replace these with your actual EmailJS IDs from https://www.emailjs.com/
-    const serviceId = 'your_service_id';
-    const templateId = 'your_template_id';
-    const publicKey = 'your_public_key';
+    setLoading(true);
 
-    emailjs.send(serviceId, templateId, {
+    const templateParams = {
       from_name: formData.name,
       from_email: formData.email,
+      reply_to: formData.email,
       message: formData.message,
-      to_email: 'info.mohotechsolution@gmail.com'
-    }, publicKey)
-      .then((response) => {
-        console.log('Email sent successfully!', response);
+      to_email: adminEmail
+    };
+
+    console.log('EmailJS template params:', templateParams);
+
+    emailjs.send(serviceId, templateId, templateParams, publicKey)
+      .then(() => {
         alert('Message sent successfully!');
         setFormData({ name: '', email: '', message: '' });
       })
       .catch((error) => {
-        console.error('Failed to send email:', error);
-        alert('Failed to send message. Please try again.');
+        console.error('EmailJS error:', error);
+        const message = error.text || error.message || 'Please check your EmailJS service/template settings.';
+        alert(`Failed to send message: ${message}`);
+      })
+      .finally(() => {
+        setLoading(false);
       });
   };
 
@@ -103,9 +118,10 @@ const Contact = ({ id = 'contact' }) => {
             </div>
             <button
               type="submit"
-              className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300"
+              disabled={loading}
+              className="w-full bg-blue-600 text-white py-2 px-4 rounded-md hover:bg-blue-700 transition duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
             >
-              Send Message
+              {loading ? 'Sending...' : 'Send Message'}
             </button>
           </form>
           <div className="mt-6 text-center">
@@ -118,6 +134,28 @@ const Contact = ({ id = 'contact' }) => {
             >
               <FaWhatsapp size={20} /> Contact me on WhatsApp
             </a>
+          </div>
+        </motion.div>
+
+        {/* Google Map Section */}
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.4 }}
+          className="mt-12 max-w-4xl mx-auto px-4"
+        >
+          <h2 className="text-2xl font-bold text-center mb-6">Visit Our Location</h2>
+          <div className="w-full h-96 rounded-lg shadow-lg overflow-hidden">
+            <iframe
+              src="https://maps.google.com/maps?q=45.924198,6.870443&z=16&output=embed"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="Our Location"
+            ></iframe>
           </div>
         </motion.div>
       </div>
