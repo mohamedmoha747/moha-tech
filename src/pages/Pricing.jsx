@@ -12,7 +12,9 @@ const Pricing = ({ id = 'pricing' }) => {
         'Up to 5 Pages',
         'Contact Form',
         'SEO Optimization',
-        '1 Year Support'
+        '1 Year Support',
+        '7 Days Deliver'
+
       ]
     },
     {
@@ -25,7 +27,8 @@ const Pricing = ({ id = 'pricing' }) => {
         'User Management',
         'Analytics Integration',
         'Custom Features',
-        '2 Years Support'
+        '2 Years Support',
+        '14 Days Deliver'
       ]
     }
   ];

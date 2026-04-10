@@ -8,21 +8,21 @@ const Projects = ({ id = 'projects' }) => {
       title: 'Gym Management System',
       description: 'Admin dashboard with user management and analytics',
       github: 'https://github.com/your-username/gym-management-system',
-      liveDemo: 'https://your-demo-url.com/gym-management'
+      liveDemo: 'https://gym-delta-neon.vercel.app/'
     },
     {
       icon: <FaTint />,
-      title: 'Blood Bank Management System',
-      description: 'Donor management with SMS notification system',
-      github: 'https://github.com/your-username/blood-bank-management',
-      liveDemo: 'https://your-demo-url.com/blood-bank'
+      title: 'JN FOOD-CORNER',
+      description: 'A full-featured e-commerce platform built using React, focusing on smooth UI, fast performance, and an easy ordering experience.',
+      github: 'https://github.com/mohamedmoha747/JN-food-corner',
+      liveDemo: 'https://jn-food-corner-9t14.vercel.app/'
     },
     {
       icon: <FaUtensils />,
-      title: 'Restaurant Management System',
-      description: 'QR-based ordering system with real-time updates',
-      github: 'https://github.com/your-username/restaurant-management',
-      liveDemo: 'https://your-demo-url.com/restaurant-management'
+      title: 'Personal Portfolio',
+      description: 'I am a passionate Full Stack Developer with over 5 years of experience creating modern web applications. I specialize in JavaScript ecosystems including React, Node.js, and modern CSS frameworks.',
+      github: '',
+      liveDemo: 'https://github.com/mohamedmoha747/Modern-Portfolio'
     }
   ];
 
