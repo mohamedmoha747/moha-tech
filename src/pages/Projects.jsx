@@ -20,7 +20,7 @@ const Projects = ({ id = 'projects' }) => {
     {
       icon: <FaUtensils />,
       title: 'Personal Portfolio',
-      description: 'I am a passionate Full Stack Developer with over 5 years of experience creating modern web applications. I specialize in JavaScript ecosystems including React, Node.js, and modern CSS frameworks.',
+      description: 'I am a passionate MERN Stack Developer with a strong foundation in building modern web applications.I specialize in JavaScript technologies including React, Node.js, Express, and MongoDB, along with modern CSS frameworks.',
       github: 'https://github.com/mohamedmoha747/Modern-Portfolio',
       liveDemo: 'https://modern-portfolio-ten-alpha.vercel.app/'
     }
