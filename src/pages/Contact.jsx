@@ -127,7 +127,7 @@ const Contact = ({ id = 'contact' }) => {
           <div className="mt-6 text-center">
             <p className="text-gray-600 dark:text-gray-400 mb-4">Or contact me directly:</p>
             <a
-              href="https://wa.me/918124224680?text=Hello%20Mohamed,%20I%20would%20like%20to%20discuss%20a%20project."
+              href="https://wa.me/918124224680?text=Hello%20MOHOmed,%20I%20would%20like%20to%20discuss%20a%20project."
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors duration-200"

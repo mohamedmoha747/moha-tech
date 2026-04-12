@@ -10,7 +10,7 @@ const Home = ({ id = 'home' }) => {
             transition={{ duration: 0.5 }}
             className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
           >
-            Mohamed Harun
+            MOHOmed Harun
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 50 }}

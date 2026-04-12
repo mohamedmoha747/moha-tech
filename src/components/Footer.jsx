@@ -6,7 +6,7 @@ const Footer = () => {
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pb-8 border-b border-slate-800">
           <div>
-            <h3 className="text-2xl font-bold mb-4">Moha Tech Solution</h3>
+            <h3 className="text-2xl font-bold mb-4">MOHO Tech Solution</h3>
             <p className="text-sm md:text-base leading-relaxed text-slate-300 mb-4">
               We help startups, businesses, and brands build powerful web experiences with modern websites, apps, and digital products.
             </p>
@@ -51,13 +51,13 @@ const Footer = () => {
                 Call Now
               </a>
               <p className="text-sm md:text-base">
-                <a href="mailto:info.mohatechsolution@gmail.com" className="hover:text-white">info.mohatechsolution@gmail.com</a>
+                <a href="mailto:info.MOHOtechsolution@gmail.com" className="hover:text-white">info.MOHOtechsolution@gmail.com</a>
               </p>
               <div className="flex items-center gap-4 mt-3">
-                <a href="https://github.com/mohamedmoha747" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white">
+                <a href="https://github.com/MOHOmedMOHO747" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white">
                   <FaGithub size={20} />
                 </a>
-                <a href="https://www.linkedin.com/in/mohamed-harun" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white">
+                <a href="https://www.linkedin.com/in/MOHOmed-harun" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white">
                   <FaLinkedin size={20} />
                 </a>
               </div>
@@ -67,7 +67,7 @@ const Footer = () => {
 
         <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between pt-8 text-slate-400">
           <a href="#top" className="inline-flex items-center gap-2 text-sm hover:text-white">↑ Back to Top</a>
-          <p className="text-sm">© 2026 Moha Tech Solution. All rights reserved.</p>
+          <p className="text-sm">© 2026 MOHO Tech Solution. All rights reserved.</p>
         </div>
       </div>
     </footer>

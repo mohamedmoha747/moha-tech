@@ -1,4 +1,4 @@
-# Mohamed Harun - Personal Portfolio
+# MOHOmed Harun - Personal Portfolio
 
 A modern, responsive personal portfolio website built with React, Vite, and Tailwind CSS.
 
@@ -52,4 +52,4 @@ MOHO TECHS - Building fast, scalable, and modern web applications.
 
 ## Contact
 
-Mohamed Harun - MERN Stack Developer | Freelancer
+MOHOmed Harun - MERN Stack Developer | Freelancer

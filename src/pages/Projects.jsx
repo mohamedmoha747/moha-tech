@@ -14,14 +14,14 @@ const Projects = ({ id = 'projects' }) => {
       icon: <FaTint />,
       title: 'JN FOOD-CORNER',
       description: 'A full-featured e-commerce platform built using React, focusing on smooth UI, fast performance, and an easy ordering experience.',
-      github: 'https://github.com/mohamedmoha747/JN-food-corner',
+      github: 'https://github.com/MOHOmedMOHO747/JN-food-corner',
       liveDemo: 'https://jn-food-corner-9t14.vercel.app/'
     },
     {
       icon: <FaUtensils />,
       title: 'Personal Portfolio',
       description: 'I am a passionate MERN Stack Developer with a strong foundation in building modern web applications.I specialize in JavaScript technologies including React, Node.js, Express, and MongoDB, along with modern CSS frameworks.',
-      github: 'https://github.com/mohamedmoha747/Modern-Portfolio',
+      github: 'https://github.com/MOHOmedMOHO747/Modern-Portfolio',
       liveDemo: 'https://modern-portfolio-ten-alpha.vercel.app/'
     }
   ];
