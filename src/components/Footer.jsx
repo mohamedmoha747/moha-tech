@@ -51,13 +51,13 @@ const Footer = () => {
                 Call Now
               </a>
               <p className="text-sm md:text-base">
-                <a href="mailto:info.MOHOtechsolution@gmail.com" className="hover:text-white">info.Mohatechsolution@gmail.com</a>
+                <a href="mailto:info.MOHOtechsolution@gmail.com" className="hover:text-white">info.mohatechsolution@gmail.com</a>
               </p>
               <div className="flex items-center gap-4 mt-3">
-                <a href="https://github.com/mohamedMmoha747" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white">
+                <a href="https://github.com/mohamedmoha747" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white">
                   <FaGithub size={20} />
                 </a>
-                <a href="https://www.linkedin.com/in/MOHOmed-harun" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white">
+                <a href="https://www.linkedin.com/in/mohammed-harun" target="_blank" rel="noopener noreferrer" className="text-slate-300 hover:text-white">
                   <FaLinkedin size={20} />
                 </a>
               </div>
