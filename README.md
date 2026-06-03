@@ -48,7 +48,7 @@ npm run build
 
 ## Freelance Company
 
-MOHO TECHS - Building fast, scalable, and modern web applications.
+MOHO Web Solutions - Building fast, scalable, and modern web applications.
 
 ## Contact
 

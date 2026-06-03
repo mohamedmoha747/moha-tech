@@ -39,10 +39,10 @@ const Navbar = ({ activeSection, onNavItemClick }) => {
         <button onClick={() => onNavItemClick('home')} className="flex items-center gap-3 focus:outline-none">
           <img
             src="/images/logo.jpg"
-            alt="MOHO TECHS logo"
+            alt="MOHO Web Solutions logo"
             className="h-10 w-10 rounded-full object-cover"
           />
-          <span className="text-xl font-bold text-blue-600 dark:text-blue-400">MOHO TECH </span>
+          <span className="text-xl font-bold text-blue-600 dark:text-blue-400">MOHO WEB</span>
         </button>
 
         <div className="hidden md:flex items-center space-x-4">
