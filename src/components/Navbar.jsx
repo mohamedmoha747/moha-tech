@@ -38,11 +38,10 @@ const Navbar = ({ activeSection, onNavItemClick }) => {
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <button onClick={() => onNavItemClick('home')} className="flex items-center gap-3 focus:outline-none">
           <img
-            src="/images/logo.jpg"
+            src="/images/logo.png"
             alt="MOHO Web Solutions logo"
-            className="h-10 w-10 rounded-full object-cover"
+            className="h-12 w-auto object-contain"
           />
-          <span className="text-xl font-bold text-blue-600 dark:text-blue-400">MOHO WEB</span>
         </button>
 
         <div className="hidden md:flex items-center space-x-4">
