@@ -40,8 +40,9 @@ const Navbar = ({ activeSection, onNavItemClick }) => {
           <img
             src="/images/logo.png"
             alt="MOHO Web Solutions logo"
-            className="h-12 w-auto object-contain"
+            className="h-12 w-12 rounded-full object-cover"
           />
+          <span className="text-lg font-bold text-gray-900 dark:text-white">MOHO WEB</span>
         </button>
 
         <div className="hidden md:flex items-center space-x-4">
