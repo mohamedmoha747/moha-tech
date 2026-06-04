@@ -51,13 +51,13 @@ const Navbar = ({ activeSection, onNavItemClick }) => {
               className="h-10 w-10 rounded-lg object-cover transition-transform duration-300 group-hover:scale-110"
             />
             <span
-              className="absolute bottom-1 right-1 w-2.5 h-2.5 rounded-full bg-blue-400 shadow-[0_0_12px_rgba(96,165,250,0.6)] border border-white/20 animate-pulse"
+              className="absolute bottom-1 right-1 w-2.5 h-2.5 rounded-full bg-green-400 shadow-[0_0_12px_rgba(74,222,128,0.8)] border border-white/20 animate-pulse"
               aria-hidden="true"
             />
           </div>
           <div className="flex flex-col leading-tight relative">
-            <span className="text-sm font-bold uppercase tracking-wide text-white">MOHO</span>
-            <span className="text-xs font-semibold text-blue-400 tracking-tight">WEB SOLUTIONS</span>
+            <span className="text-sm font-bold uppercase tracking-wide text-white">MOHO WEB</span>
+            <span className="text-xs font-semibold text-green-400 tracking-tight">SOLUTION</span>
           </div>
         </button>
 
@@ -107,7 +107,7 @@ const Navbar = ({ activeSection, onNavItemClick }) => {
         <div className="flex items-center gap-2">
           <button 
             onClick={toggleDarkMode} 
-            className="p-2.5 rounded-lg hover:bg-slate-800 transition-all duration-300 text-gray-300 hover:text-blue-400"
+            className="p-2.5 rounded-lg hover:bg-slate-800 transition-all duration-300 text-gray-300 hover:text-green-400"
             title="Toggle dark mode"
           >
             {darkMode ? <FaSun size={18} /> : <FaMoon size={18} />}
@@ -115,7 +115,7 @@ const Navbar = ({ activeSection, onNavItemClick }) => {
           
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)} 
-            className="md:hidden p-2.5 rounded-lg hover:bg-slate-800 transition-all duration-300 text-gray-300 hover:text-blue-400"
+            className="md:hidden p-2.5 rounded-lg hover:bg-slate-800 transition-all duration-300 text-gray-300 hover:text-green-400"
             title="Toggle menu"
           >
             {isMenuOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
