@@ -51,13 +51,13 @@ const Navbar = ({ activeSection, onNavItemClick }) => {
               className="h-10 w-10 rounded-lg object-cover transition-transform duration-300 group-hover:scale-110"
             />
             <span
-              className="absolute bottom-1 right-1 w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.6)] border border-white/20 animate-pulse"
+              className="absolute bottom-1 right-1 w-2.5 h-2.5 rounded-full bg-blue-400 shadow-[0_0_12px_rgba(96,165,250,0.6)] border border-white/20 animate-pulse"
               aria-hidden="true"
             />
           </div>
           <div className="flex flex-col leading-tight relative">
             <span className="text-sm font-bold uppercase tracking-wide text-white">MOHO</span>
-            <span className="text-xs font-semibold text-emerald-400 tracking-tight">WEB SOLUTIONS</span>
+            <span className="text-xs font-semibold text-blue-400 tracking-tight">WEB SOLUTIONS</span>
           </div>
         </button>
 
@@ -75,7 +75,7 @@ const Navbar = ({ activeSection, onNavItemClick }) => {
               <span
                 className={`absolute inset-0 rounded-lg transition-all duration-300 ease-out ${
                   activeSection === link.id
-                    ? 'bg-emerald-400/15 shadow-[inset_0_0_20px_rgba(52,211,153,0.3),0_0_20px_rgba(52,211,153,0.2)]'
+                    ? 'bg-blue-400/15 shadow-[inset_0_0_20px_rgba(96,165,250,0.3),0_0_20px_rgba(96,165,250,0.2)]'
                     : 'bg-transparent'
                 }`}
               />
@@ -84,8 +84,8 @@ const Navbar = ({ activeSection, onNavItemClick }) => {
               <span
                 className={`relative transition-all duration-300 ease-out ${
                   activeSection === link.id
-                    ? 'text-emerald-400 font-semibold'
-                    : 'text-gray-300 group-hover:text-emerald-400'
+                    ? 'text-blue-400 font-semibold'
+                    : 'text-gray-300 group-hover:text-blue-400'
                 }`}
               >
                 {link.label}
@@ -95,8 +95,8 @@ const Navbar = ({ activeSection, onNavItemClick }) => {
               <span
                 className={`absolute bottom-1 left-0 h-1 rounded-full transition-all duration-300 ease-out ${
                   activeSection === link.id
-                    ? 'w-full bg-gradient-to-r from-emerald-400 to-emerald-300 shadow-[0_0_10px_rgba(52,211,153,0.6)]'
-                    : 'w-0 bg-emerald-400'
+                    ? 'w-full bg-gradient-to-r from-blue-400 to-blue-300 shadow-[0_0_10px_rgba(96,165,250,0.6)]'
+                    : 'w-0 bg-blue-400'
                 }`}
               />
             </button>
@@ -107,7 +107,7 @@ const Navbar = ({ activeSection, onNavItemClick }) => {
         <div className="flex items-center gap-2">
           <button 
             onClick={toggleDarkMode} 
-            className="p-2.5 rounded-lg hover:bg-slate-800 transition-all duration-300 text-gray-300 hover:text-emerald-400"
+            className="p-2.5 rounded-lg hover:bg-slate-800 transition-all duration-300 text-gray-300 hover:text-blue-400"
             title="Toggle dark mode"
           >
             {darkMode ? <FaSun size={18} /> : <FaMoon size={18} />}
@@ -115,7 +115,7 @@ const Navbar = ({ activeSection, onNavItemClick }) => {
           
           <button 
             onClick={() => setIsMenuOpen(!isMenuOpen)} 
-            className="md:hidden p-2.5 rounded-lg hover:bg-slate-800 transition-all duration-300 text-gray-300 hover:text-emerald-400"
+            className="md:hidden p-2.5 rounded-lg hover:bg-slate-800 transition-all duration-300 text-gray-300 hover:text-blue-400"
             title="Toggle menu"
           >
             {isMenuOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
@@ -136,8 +136,8 @@ const Navbar = ({ activeSection, onNavItemClick }) => {
                 }}
                 className={`relative w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300 focus:outline-none ${
                   activeSection === link.id
-                    ? 'bg-emerald-400/20 text-emerald-400 shadow-[inset_0_0_20px_rgba(52,211,153,0.3)]'
-                    : 'text-gray-300 hover:bg-slate-700/50 hover:text-emerald-400'
+                    ? 'bg-blue-400/20 text-blue-400 shadow-[inset_0_0_20px_rgba(96,165,250,0.3)]'
+                    : 'text-gray-300 hover:bg-slate-700/50 hover:text-blue-400'
                 }`}
               >
                 {link.label}
