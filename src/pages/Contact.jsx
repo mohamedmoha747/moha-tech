@@ -137,27 +137,7 @@ const Contact = ({ id = 'contact' }) => {
           </div>
         </motion.div>
 
-        {/* Google Map Section */}
-        <motion.div
-          initial={{ opacity: 0, y: 50 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.5, delay: 0.4 }}
-          className="mt-12 max-w-4xl mx-auto px-4"
-        >
-          <h2 className="text-2xl font-bold text-center mb-6">Visit Our Location</h2>
-          <div className="w-full h-96 rounded-lg shadow-lg overflow-hidden">
-            <iframe
-              src="https://maps.google.com/maps?q=45.924198,6.870443&z=16&output=embed"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-              title="Our Location"
-            ></iframe>
-          </div>
-        </motion.div>
+        {/* Google Map removed per request */}
       </div>
     </section>
   );
