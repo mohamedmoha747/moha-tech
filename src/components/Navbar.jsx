@@ -69,14 +69,14 @@ const Navbar = ({ activeSection, onNavItemClick }) => {
               onClick={() => {
                 onNavItemClick(link.id);
               }}
-              className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 ease-out focus:outline-none group`}
+              className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 ease-out focus:outline-none group hover-effect`}
             >
               {/* Glowing background pill for active state */}
               <span
                 className={`absolute inset-0 rounded-lg transition-all duration-300 ease-out ${
                   activeSection === link.id
                     ? 'bg-blue-400/15 shadow-[inset_0_0_20px_rgba(96,165,250,0.3),0_0_20px_rgba(96,165,250,0.2)]'
-                    : 'bg-transparent'
+                    : 'bg-transparent hover:bg-blue-400/10'
                 }`}
               />
               
@@ -85,7 +85,7 @@ const Navbar = ({ activeSection, onNavItemClick }) => {
                 className={`relative transition-all duration-300 ease-out ${
                   activeSection === link.id
                     ? 'text-blue-400 font-semibold'
-                    : 'text-gray-300 group-hover:text-blue-400'
+                    : 'text-gray-300 hover:text-blue-400'
                 }`}
               >
                 {link.label}
