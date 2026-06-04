@@ -43,7 +43,7 @@
             <div className="w-[320px] sm:w-[360px] bg-slate-900/30 p-6 rounded-[12px] shadow-lg">
                 <div className="w-full aspect-square overflow-hidden rounded-full">
                   <img
-                    src="/images/mohamed.jpeg"
+                    src="/images/harun.jpeg"
                     alt="Mohamed Harun"
                     className="w-full h-full object-cover shadow-md"
                   />
