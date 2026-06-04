@@ -34,15 +34,27 @@ const Navbar = ({ activeSection, onNavItemClick }) => {
   ];
 
   return (
-    <nav className="bg-white dark:bg-gray-800 shadow-md fixed w-full z-10">
+    <nav className="bg-[#0f172a] shadow-md fixed w-full z-10">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
         <button onClick={() => onNavItemClick('home')} className="flex items-center gap-3 focus:outline-none">
-          <img
-            src="/images/logo.png"
-            alt="MOHO Web Solutions logo"
-            className="h-12 w-12 rounded-full object-cover"
-          />
-          <span className="text-lg font-bold text-gray-900 dark:text-white">MOHO WEB</span>
+          <div className="relative w-10 h-10 flex-shrink-0">
+            <img
+              src="/images/logo.png"
+              alt="MOHO Web Solutions logo"
+              className="h-10 w-10 rounded-[10px] object-cover"
+            />
+            <span
+              className="absolute bottom-1 right-1 w-2 h-2 rounded-full bg-[#00ff88] shadow-[0_0_8px_rgba(0,255,136,0.25)] border border-white/10"
+              aria-hidden="true"
+            />
+          </div>
+          <div className="flex flex-col leading-tight relative">
+            <span className="text-sm font-bold uppercase text-white">MOHO WEB</span>
+
+            <span className="inline-flex items-center text-xs mt-0">
+              <span className="text-xs font-semibold text-[#00ff88] tracking-tight">SOLUTION</span>
+            </span>
+          </div>
         </button>
 
         <div className="hidden md:flex items-center space-x-4">
