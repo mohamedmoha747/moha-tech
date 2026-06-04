@@ -19,10 +19,16 @@ function App() {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             setActiveSection(entry.target.id);
+            // Update URL hash without jumping
+            history.replaceState(null, null, `#${entry.target.id}`);
           }
         });
       },
-      { rootMargin: '-40% 0px -55% 0px', threshold: 0.2 }
+      { 
+        // Offset for fixed navbar (adjust based on navbar height)
+        rootMargin: '-80px 0px -60% 0px', 
+        threshold: 0.1 
+      }
     );
 
     sections.forEach((id) => {
@@ -41,19 +47,28 @@ function App() {
   const scrollToSection = (id) => {
     const element = document.getElementById(id);
     if (element) {
-      element.scrollIntoView({ behavior: 'smooth' });
+      // Calculate offset for fixed navbar (80px)
+      const yOffset = -80;
+      const y = element.getBoundingClientRect().top + window.pageYOffset + yOffset;
+      
+      window.scrollTo({ 
+        top: y, 
+        behavior: 'smooth' 
+      });
     }
   };
 
   return (
     <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white">
       <Navbar activeSection={activeSection} onNavItemClick={scrollToSection} />
-      <Home id="home" />
-      <About id="about" />
-      <Services id="services" />
-      <Projects id="projects" />
-      <Pricing id="pricing" />
-      <Contact id="contact" />
+      <div className="pt-16">
+        <Home id="home" />
+        <About id="about" />
+        <Services id="services" />
+        <Projects id="projects" />
+        <Pricing id="pricing" />
+        <Contact id="contact" />
+      </div>
       <Footer />
     </div>
   );

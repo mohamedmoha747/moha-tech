@@ -34,67 +34,99 @@ const Navbar = ({ activeSection, onNavItemClick }) => {
   ];
 
   return (
-    <nav className="bg-[#0f172a] shadow-md fixed w-full z-10">
-      <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <button onClick={() => onNavItemClick('home')} className="flex items-center gap-3 focus:outline-none">
+    <nav className="bg-slate-900 shadow-2xl fixed w-full z-50 border-b border-slate-800">
+      <div className="container mx-auto px-4 py-3 flex justify-between items-center">
+        {/* Logo */}
+        <button 
+          onClick={() => {
+            onNavItemClick('home');
+            setIsMenuOpen(false);
+          }} 
+          className="flex items-center gap-3 focus:outline-none group"
+        >
           <div className="relative w-10 h-10 flex-shrink-0">
             <img
               src="/images/logo.png"
               alt="MOHO Web Solutions logo"
-              className="h-10 w-10 rounded-[10px] object-cover"
+              className="h-10 w-10 rounded-lg object-cover transition-transform duration-300 group-hover:scale-110"
             />
             <span
-              className="absolute bottom-1 right-1 w-2 h-2 rounded-full bg-[#00ff88] shadow-[0_0_8px_rgba(0,255,136,0.25)] border border-white/10"
+              className="absolute bottom-1 right-1 w-2.5 h-2.5 rounded-full bg-emerald-400 shadow-[0_0_12px_rgba(52,211,153,0.6)] border border-white/20 animate-pulse"
               aria-hidden="true"
             />
           </div>
           <div className="flex flex-col leading-tight relative">
-            <span className="text-sm font-bold uppercase text-white">MOHO WEB</span>
-
-            <span className="inline-flex items-center text-xs mt-0">
-              <span className="text-xs font-semibold text-[#00ff88] tracking-tight">SOLUTION</span>
-            </span>
+            <span className="text-sm font-bold uppercase tracking-wide text-white">MOHO</span>
+            <span className="text-xs font-semibold text-emerald-400 tracking-tight">WEB SOLUTIONS</span>
           </div>
         </button>
 
-        <div className="hidden md:flex items-center space-x-4">
+        {/* Desktop Navigation Links */}
+        <div className="hidden md:flex items-center gap-1">
           {links.map((link) => (
             <button
               key={link.id}
-              onClick={() => onNavItemClick(link.id)}
-              className={`relative px-2 py-1 text-sm font-medium transition duration-300 focus:outline-none ${
-                activeSection === link.id
-                  ? 'text-blue-600 dark:text-blue-300'
-                  : 'text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-300'
-              }`}
+              onClick={() => {
+                onNavItemClick(link.id);
+              }}
+              className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 ease-out focus:outline-none group`}
             >
-              {link.label}
+              {/* Glowing background pill for active state */}
               <span
-                className={`absolute left-0 -bottom-1 h-0.5 bg-blue-600 dark:bg-blue-300 transition-all duration-300 ${
-                  activeSection === link.id ? 'w-full' : 'w-0'
+                className={`absolute inset-0 rounded-lg transition-all duration-300 ease-out ${
+                  activeSection === link.id
+                    ? 'bg-emerald-400/15 shadow-[inset_0_0_20px_rgba(52,211,153,0.3),0_0_20px_rgba(52,211,153,0.2)]'
+                    : 'bg-transparent'
+                }`}
+              />
+              
+              {/* Text with color transition */}
+              <span
+                className={`relative transition-all duration-300 ease-out ${
+                  activeSection === link.id
+                    ? 'text-emerald-400 font-semibold'
+                    : 'text-gray-300 group-hover:text-emerald-400'
+                }`}
+              >
+                {link.label}
+              </span>
+
+              {/* Bottom accent line for extra visual appeal */}
+              <span
+                className={`absolute bottom-1 left-0 h-1 rounded-full transition-all duration-300 ease-out ${
+                  activeSection === link.id
+                    ? 'w-full bg-gradient-to-r from-emerald-400 to-emerald-300 shadow-[0_0_10px_rgba(52,211,153,0.6)]'
+                    : 'w-0 bg-emerald-400'
                 }`}
               />
             </button>
           ))}
-
-          <button onClick={toggleDarkMode} className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
-            {darkMode ? <FaSun /> : <FaMoon />}
-          </button>
         </div>
 
-        <div className="md:hidden flex items-center space-x-2">
-          <button onClick={toggleDarkMode} className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
-            {darkMode ? <FaSun /> : <FaMoon />}
+        {/* Dark Mode & Mobile Menu */}
+        <div className="flex items-center gap-2">
+          <button 
+            onClick={toggleDarkMode} 
+            className="p-2.5 rounded-lg hover:bg-slate-800 transition-all duration-300 text-gray-300 hover:text-emerald-400"
+            title="Toggle dark mode"
+          >
+            {darkMode ? <FaSun size={18} /> : <FaMoon size={18} />}
           </button>
-          <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700">
-            {isMenuOpen ? <FaTimes /> : <FaBars />}
+          
+          <button 
+            onClick={() => setIsMenuOpen(!isMenuOpen)} 
+            className="md:hidden p-2.5 rounded-lg hover:bg-slate-800 transition-all duration-300 text-gray-300 hover:text-emerald-400"
+            title="Toggle menu"
+          >
+            {isMenuOpen ? <FaTimes size={20} /> : <FaBars size={20} />}
           </button>
         </div>
       </div>
 
+      {/* Mobile Menu */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white dark:bg-gray-800 shadow-md">
-          <div className="container mx-auto px-4 py-4 flex flex-col space-y-4">
+        <div className="md:hidden bg-slate-800/50 backdrop-blur-md border-t border-slate-700 animate-in fade-in slide-in-from-top-2 duration-300">
+          <div className="container mx-auto px-4 py-4 flex flex-col gap-2">
             {links.map((link) => (
               <button
                 key={link.id}
@@ -102,10 +134,10 @@ const Navbar = ({ activeSection, onNavItemClick }) => {
                   onNavItemClick(link.id);
                   setIsMenuOpen(false);
                 }}
-                className={`text-left px-2 py-1 text-sm font-medium transition duration-300 focus:outline-none ${
+                className={`relative w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300 focus:outline-none ${
                   activeSection === link.id
-                    ? 'text-blue-600 dark:text-blue-300'
-                    : 'text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-300'
+                    ? 'bg-emerald-400/20 text-emerald-400 shadow-[inset_0_0_20px_rgba(52,211,153,0.3)]'
+                    : 'text-gray-300 hover:bg-slate-700/50 hover:text-emerald-400'
                 }`}
               >
                 {link.label}
