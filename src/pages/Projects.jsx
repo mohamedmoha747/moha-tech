@@ -37,20 +37,22 @@ const Projects = ({ id = 'projects' }) => {
         >
           My Projects
         </motion.h1>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 items-stretch">
           {projects.map((project, index) => (
             <motion.div
               key={project.title}
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 * index }}
-              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
+              className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between h-full"
             >
-              <div className="text-blue-600 dark:text-blue-400 text-4xl mb-4">
-                {project.icon}
+              <div>
+                <div className="text-blue-600 dark:text-blue-400 text-4xl mb-4">
+                  {project.icon}
+                </div>
+                <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
+                <p className="text-gray-600 dark:text-gray-400 mb-6 leading-relaxed">{project.description}</p>
               </div>
-              <h3 className="text-xl font-semibold mb-2">{project.title}</h3>
-              <p className="text-gray-600 dark:text-gray-400 mb-4">{project.description}</p>
               <div className="flex flex-wrap gap-3">
                 <a
                   href={project.github}

@@ -55,9 +55,9 @@ const Navbar = ({ activeSection, onNavItemClick }) => {
               aria-hidden="true"
             />
           </div>
-          <div className="flex flex-col leading-tight relative">
+          <div className="flex flex-col justify-center leading-tight relative text-left">
             <span className="text-sm font-bold uppercase tracking-wide text-white">MOHO WEB</span>
-            <span className="text-xs font-semibold text-green-400 tracking-tight">SOLUTION</span>
+            <span className="text-xs font-semibold text-green-400 tracking-tight">SOLUTIONS</span>
           </div>
         </button>
 
@@ -69,7 +69,7 @@ const Navbar = ({ activeSection, onNavItemClick }) => {
               onClick={() => {
                 onNavItemClick(link.id);
               }}
-              className={`relative px-4 py-2 text-sm font-medium transition-all duration-300 ease-out focus:outline-none group hover-effect`}
+              className={`relative inline-flex items-center justify-center px-4 py-2 min-h-[2.5rem] text-sm font-medium transition-all duration-300 ease-out focus:outline-none group hover-effect`}
             >
               {/* Glowing background pill for active state */}
               <span
@@ -82,7 +82,7 @@ const Navbar = ({ activeSection, onNavItemClick }) => {
               
               {/* Text with color transition */}
               <span
-                className={`relative transition-all duration-300 ease-out ${
+                className={`relative inline-flex items-center justify-center transition-all duration-300 ease-out ${
                   activeSection === link.id
                     ? 'text-blue-400 font-semibold'
                     : 'text-gray-300 hover:text-blue-400'
@@ -134,7 +134,7 @@ const Navbar = ({ activeSection, onNavItemClick }) => {
                   onNavItemClick(link.id);
                   setIsMenuOpen(false);
                 }}
-                className={`relative w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300 focus:outline-none ${
+                className={`relative inline-flex items-center w-full text-left px-4 py-3 rounded-lg text-sm font-medium transition-all duration-300 focus:outline-none ${
                   activeSection === link.id
                     ? 'bg-blue-400/20 text-blue-400 shadow-[inset_0_0_20px_rgba(96,165,250,0.3)]'
                     : 'text-gray-300 hover:bg-slate-700/50 hover:text-blue-400'
