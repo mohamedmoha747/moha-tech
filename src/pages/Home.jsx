@@ -1,4 +1,6 @@
-﻿const Home = ({ id = 'home' }) => {
+﻿import { SiFiverr, SiLinkedin, SiGithub, SiInstagram } from 'react-icons/si';
+
+const Home = ({ id = 'home' }) => {
   return (
     <section id={id} className="bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white min-h-screen flex items-center pt-24 pb-24">
       <div className="container mx-auto px-4">
@@ -55,6 +57,57 @@
                   <p className="mt-2 text-sm text-slate-400 max-w-[280px] mx-auto">
                     I build production-ready web applications using React, Node.js and MongoDB. Available for freelance and contract work.
                   </p>
+                </div>
+
+                <div className="mt-6 pt-5 border-t border-white/10 text-center">
+                  <p className="text-xs uppercase tracking-[0.35em] text-slate-400 mb-4">
+                    Connect With Us
+                  </p>
+                  <div className="flex items-center justify-center gap-3 flex-wrap">
+                    <a
+                      href="https://www.fiverr.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Fiverr"
+                      aria-label="Fiverr"
+                      className="group relative inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 backdrop-blur-xl text-white transition duration-300 transform hover:scale-105 hover:-translate-y-0.5 hover:shadow-[0_0_22px_rgba(34,197,94,0.24)]"
+                    >
+                      <SiFiverr className="h-6 w-6 text-[#1dbf73]" />
+                    </a>
+
+                    <a
+                      href="https://www.linkedin.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="LinkedIn"
+                      aria-label="LinkedIn"
+                      className="group relative inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 backdrop-blur-xl text-white transition duration-300 transform hover:scale-105 hover:-translate-y-0.5 hover:shadow-[0_0_22px_rgba(34,197,94,0.24)]"
+                    >
+                      <SiLinkedin className="h-6 w-6 text-[#0a66c2]" />
+                    </a>
+
+                    <a
+                      href="https://github.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="GitHub"
+                      aria-label="GitHub"
+                      className="group relative inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 backdrop-blur-xl text-white transition duration-300 transform hover:scale-105 hover:-translate-y-0.5 hover:shadow-[0_0_22px_rgba(34,197,94,0.24)]"
+                    >
+                      <SiGithub className="h-6 w-6 text-[#181717]" />
+                    </a>
+
+                    <a
+                      href="https://www.instagram.com"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      title="Instagram"
+                      aria-label="Instagram"
+                      className="group relative inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-gradient-to-br from-pink-500 via-purple-500 to-orange-400 text-white transition duration-300 transform hover:scale-105 hover:-translate-y-0.5 hover:shadow-[0_0_22px_rgba(34,197,94,0.24)]"
+                    >
+                      <SiInstagram className="h-6 w-6" />
+                    </a>
+                  </div>
                 </div>
               </div>
           </div>
