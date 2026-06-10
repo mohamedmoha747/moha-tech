@@ -66,7 +66,7 @@ const Home = ({ id = 'home' }) => {
                   </p>
                   <div className="flex items-center justify-center gap-3 flex-wrap">
                     <a
-                      href="https://www.fiverr.com"
+                      href="https://www.fiverr.com/sellers/mohamed_harun92"
                       target="_blank"
                       rel="noopener noreferrer"
                       title="Fiverr"
@@ -77,7 +77,7 @@ const Home = ({ id = 'home' }) => {
                     </a>
 
                     <a
-                      href="https://www.linkedin.com"
+                      href="https://www.linkedin.com/in/mohamed-harun"
                       target="_blank"
                       rel="noopener noreferrer"
                       title="LinkedIn"
@@ -88,7 +88,7 @@ const Home = ({ id = 'home' }) => {
                     </a>
 
                     <a
-                      href="https://github.com"
+                      href="https://github.com/mohamedmoha747/"
                       target="_blank"
                       rel="noopener noreferrer"
                       title="GitHub"
@@ -99,7 +99,7 @@ const Home = ({ id = 'home' }) => {
                     </a>
 
                     <a
-                      href="https://www.instagram.com"
+                      href="https://www.instagram.com/mohamed._harun_1010?igsh=aW00bGhkM3ZlOGo2"
                       target="_blank"
                       rel="noopener noreferrer"
                       title="Instagram"
