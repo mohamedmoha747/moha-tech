@@ -3,7 +3,7 @@ import { FaLinkedin } from 'react-icons/fa';
 
 const Home = ({ id = 'home' }) => {
   return (
-    <section id={id} className="bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white min-h-screen flex items-center pt-24 pb-24">
+    <section id={id} className="bg-gradient-to-br from-[#0f172a] to-[#1e293b] text-white min-h-[100vh] flex items-center justify-center py-12">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 lg:grid-cols-[1.3fr_0.95fr] gap-10 items-center">
           {/* Left content */}
