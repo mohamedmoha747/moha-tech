@@ -59,14 +59,37 @@ const Contact = ({ id = 'contact' }) => {
   return (
     <section id={id} className="pt-20 min-h-screen py-12">
       <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: -30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6 }}
+          className="flex justify-center mb-6"
+        >
+          <div className="inline-flex items-center justify-center rounded-full p-5 bg-white/10 shadow-[0_0_30px_rgba(34,197,94,0.18)] ring-1 ring-white/15 backdrop-blur-2xl">
+            <img
+              src="/images/logo.png"
+              alt="Moho Web Solutions logo"
+              className="h-16 w-16 sm:h-20 sm:w-20 object-contain rounded-full"
+            />
+          </div>
+        </motion.div>
+
         <motion.h1
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
-          className="text-3xl md:text-4xl font-bold text-center mb-12 px-4"
+          className="text-3xl md:text-4xl font-bold text-center mb-3 px-4"
         >
-          Contact Me
+          Let's Build Your Next Project
         </motion.h1>
+        <motion.p
+          initial={{ opacity: 0, y: -10 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.1 }}
+          className="text-center text-slate-300 mb-12"
+        >
+          Contact Us
+        </motion.p>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}

@@ -1,16 +1,40 @@
 import { FaGithub, FaLinkedin } from 'react-icons/fa';
+import { motion } from 'framer-motion';
 
 const Footer = () => {
   return (
     <footer className="bg-slate-950 text-slate-100 py-12">
       <div className="container mx-auto px-4">
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+          className="flex flex-col items-center text-center mb-10"
+        >
+          <div className="inline-flex items-center justify-center rounded-full p-5 bg-white/10 shadow-[0_0_30px_rgba(34,197,94,0.16)] ring-1 ring-white/15 backdrop-blur-2xl mb-4">
+            <img
+              src="/images/logo.png"
+              alt="Moho Web Solutions logo"
+              className="h-16 w-16 sm:h-20 sm:w-20 object-contain rounded-full"
+            />
+          </div>
+          <h2 className="text-2xl md:text-3xl font-bold mb-2">MOHO WEB SOLUTIONS</h2>
+          <p className="text-slate-400 max-w-xl">Building Modern Digital Experiences</p>
+        </motion.div>
+
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 pb-8 border-b border-slate-800">
           <div>
-            <h3 className="text-2xl font-bold mb-4">Moho Web Solutions</h3>
+            <h3 className="text-xl md:text-2xl font-semibold mb-4">Professional Website Development</h3>
             <p className="text-sm md:text-base leading-relaxed text-slate-300 mb-4">
-              We help startups, businesses, and brands build powerful web experiences with modern websites, apps, and digital products.
+              MERN Stack Development, UI/UX Design, and business solutions for growing brands.
             </p>
-            <p className="text-sm text-slate-400">Chennai, Tamil Nadu, India</p>
+            <ul className="space-y-2 text-slate-300">
+              <li>Professional Website Development</li>
+              <li>MERN Stack Development</li>
+              <li>UI/UX Design</li>
+              <li>Business Solutions</li>
+            </ul>
           </div>
 
           <div>
