@@ -1,4 +1,5 @@
-﻿import { SiFiverr, SiLinkedin, SiGithub, SiInstagram } from 'react-icons/si';
+﻿import { SiFiverr, SiGithub, SiInstagram } from 'react-icons/si';
+import { FaLinkedin } from 'react-icons/fa';
 
 const Home = ({ id = 'home' }) => {
   return (
@@ -83,7 +84,7 @@ const Home = ({ id = 'home' }) => {
                       aria-label="LinkedIn"
                       className="group relative inline-flex h-12 w-12 items-center justify-center rounded-full border border-white/10 bg-white/5 backdrop-blur-xl text-white transition duration-300 transform hover:scale-105 hover:-translate-y-0.5 hover:shadow-[0_0_22px_rgba(34,197,94,0.24)]"
                     >
-                      <SiLinkedin className="h-6 w-6 text-[#0a66c2]" />
+                      <FaLinkedin className="h-6 w-6 text-[#0a66c2]" />
                     </a>
 
                     <a
