@@ -5,6 +5,7 @@ const Projects = ({ id = 'projects' }) => {
   const projects = [
     {
       icon: <FaDumbbell />,
+      image: '/images/logo.png',
       title: 'Gym Management System',
       description: 'Admin dashboard with user management and analytics',
       github: 'https://github.com/your-username/gym-management-system',
@@ -12,6 +13,7 @@ const Projects = ({ id = 'projects' }) => {
     },
     {
       icon: <FaTint />,
+      image: '/images/logo.png',
       title: 'JN FOOD-CORNER',
       description: 'A full-featured e-commerce platform built using React, focusing on smooth UI, fast performance, and an easy ordering experience.',
       github: 'https://github.com/MOHOmedMOHO747/JN-food-corner',
@@ -19,6 +21,7 @@ const Projects = ({ id = 'projects' }) => {
     },
     {
       icon: <FaUtensils />,
+      image: '/images/logo.png',
       title: 'Personal Portfolio',
       description: 'I am a passionate MERN Stack Developer with a strong foundation in building modern web applications.I specialize in JavaScript technologies including React, Node.js, Express, and MongoDB, along with modern CSS frameworks.',
       github: 'https://github.com/MOHOmedMOHO747/Modern-Portfolio',
@@ -47,6 +50,13 @@ const Projects = ({ id = 'projects' }) => {
               className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300 flex flex-col justify-between h-full"
             >
               <div>
+                {project.image && (
+                  <img
+                    src={project.image}
+                    alt={`${project.title} screenshot`}
+                    className="w-full h-48 object-cover rounded-lg mb-4"
+                  />
+                )}
                 <div className="text-blue-600 dark:text-blue-400 text-4xl mb-4">
                   {project.icon}
                 </div>
