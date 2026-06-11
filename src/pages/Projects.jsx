@@ -5,8 +5,8 @@ const Projects = ({ id = 'projects' }) => {
   const projects = [
     {
       icon: <FaDumbbell />,
-      image: '/images/logo.png',
-      title: 'Gym Management System',
+      image: '/images/msm.png',
+      title: 'MSM DENTAL CLINIC',
       description: 'Admin dashboard with user management and analytics',
       github: 'https://github.com/your-username/gym-management-system',
       liveDemo: 'https://gym-delta-neon.vercel.app/'
