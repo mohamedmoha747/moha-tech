@@ -13,7 +13,7 @@ const Projects = ({ id = 'projects' }) => {
     },
     {
       icon: <FaTint />,
-      image: '/images/logo.png',
+      image: '/images/jnfood.png',
       title: 'JN FOOD-CORNER',
       description: 'A full-featured e-commerce platform built using React, focusing on smooth UI, fast performance, and an easy ordering experience.',
       github: 'https://github.com/MOHOmedMOHO747/JN-food-corner',
@@ -21,7 +21,7 @@ const Projects = ({ id = 'projects' }) => {
     },
     {
       icon: <FaUtensils />,
-      image: '/images/logo.png',
+      image: '/images/portfolio.png',
       title: 'Personal Portfolio',
       description: 'I am a passionate MERN Stack Developer with a strong foundation in building modern web applications.I specialize in JavaScript technologies including React, Node.js, Express, and MongoDB, along with modern CSS frameworks.',
       github: 'https://github.com/MOHOmedMOHO747/Modern-Portfolio',
