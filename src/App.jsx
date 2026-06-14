@@ -7,13 +7,12 @@ import Services from './pages/Services';
 import Projects from './pages/Projects';
 import Pricing from './pages/Pricing';
 import Contact from './pages/Contact';
-import Certifications from './pages/Certifications';
 
 function App() {
   const [activeSection, setActiveSection] = useState('home');
 
   useEffect(() => {
-    const sections = ['home', 'about', 'services', 'projects', 'pricing', 'certifications', 'contact'];
+    const sections = ['home', 'about', 'services', 'projects', 'pricing', 'contact'];
 
     const observer = new IntersectionObserver(
       (entries) => {
@@ -68,7 +67,6 @@ function App() {
         <Services id="services" />
         <Projects id="projects" />
         <Pricing id="pricing" />
-        <Certifications id="certifications" />
         <Contact id="contact" />
       </div>
       <Footer />
