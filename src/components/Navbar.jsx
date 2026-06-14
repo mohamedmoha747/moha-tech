@@ -30,6 +30,7 @@ const Navbar = ({ activeSection, onNavItemClick }) => {
     { label: 'Services', id: 'services' },
     { label: 'Projects', id: 'projects' },
     { label: 'Pricing', id: 'pricing' },
+    { label: 'Certifications', id: 'certifications' },
     { label: 'Contact', id: 'contact' }
   ];
 
