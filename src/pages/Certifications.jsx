@@ -4,12 +4,11 @@ import { FaCertificate, FaCheckCircle } from 'react-icons/fa';
 const certifications = [
   {
     id: 1,
-    title: 'MERN Full Stack',
-    name: 'MERN Stack Development',
+    title: 'MERN Stack Development',
     issuer: 'SLA Institute',
-    issued: 'August 2025',
-    expires: 'January 2026',
-    skills: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'REST API', 'JavaScript'],
+    duration: 'Aug 2025 – Jan 2026',
+    completed: '10 Jan 2026',
+    skills: ['MongoDB', 'Express.js', 'React.js', 'Node.js', 'JavaScript', 'REST API'],
     image: '/images/logo.png',
     preview: '/images/logo.png',
     verified: true,
@@ -70,13 +69,13 @@ const Certifications = ({ id = 'certifications' }) => {
                     <div className="flex h-14 w-14 items-center justify-center rounded-3xl border border-white/10 bg-slate-950/70 shadow-[0_20px_60px_rgba(15,23,42,0.35)]">
                       <img
                         src={cert.image}
-                        alt={`${cert.name} logo`}
+                        alt={`${cert.title} logo`}
                         className="h-10 w-10 rounded-2xl object-contain"
                       />
                     </div>
                     <div>
-                      <p className="text-sm uppercase tracking-[0.25em] text-cyan-300">{cert.name}</p>
                       <h3 className="text-xl font-semibold text-white">{cert.title}</h3>
+                      <p className="mt-1 text-sm text-slate-300">{cert.issuer}</p>
                     </div>
                   </div>
 
@@ -88,12 +87,16 @@ const Certifications = ({ id = 'certifications' }) => {
 
                 <div className="grid gap-4 sm:grid-cols-2">
                   <div className="rounded-3xl border border-white/10 bg-slate-950/70 p-4">
-                    <p className="text-xs uppercase tracking-[0.3em] text-slate-400">Issuer</p>
-                    <p className="mt-2 text-sm font-medium text-slate-100">{cert.issuer}</p>
+                    <p className="text-xs uppercase tracking-[0.3em] text-slate-400">Certificate Duration</p>
+                    <p className="mt-2 text-sm font-medium text-slate-100">{cert.duration}</p>
+                    <p className="mt-2 text-sm text-slate-400">Completed on {cert.completed}</p>
                   </div>
                   <div className="rounded-3xl border border-white/10 bg-slate-950/70 p-4">
-                    <p className="text-xs uppercase tracking-[0.3em] text-slate-400">Issue / Expire</p>
-                    <p className="mt-2 text-sm text-slate-100">{cert.issued} · Expires {cert.expires}</p>
+                    <p className="text-xs uppercase tracking-[0.3em] text-slate-400">Status</p>
+                    <p className="mt-2 inline-flex items-center gap-2 text-sm font-semibold text-emerald-200">
+                      <span className="text-lg">✓</span>
+                      Successfully Completed
+                    </p>
                   </div>
                 </div>
 
