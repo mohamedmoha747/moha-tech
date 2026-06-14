@@ -1,6 +1,24 @@
 import { motion } from 'framer-motion';
 
+const calculateAge = (birthDateString) => {
+  const today = new Date();
+  const [month, day, year] = birthDateString.split('/').map(Number);
+  const birthDate = new Date(year, month - 1, day);
+
+  let age = today.getFullYear() - birthDate.getFullYear();
+  const hasBirthdayPassed =
+    today.getMonth() > birthDate.getMonth() ||
+    (today.getMonth() === birthDate.getMonth() && today.getDate() >= birthDate.getDate());
+
+  if (!hasBirthdayPassed) {
+    age -= 1;
+  }
+
+  return age;
+};
+
 const About = ({ id = 'about' }) => {
+  const age = calculateAge('10/10/2004');
   const skills = [
     'HTML', 'CSS', 'JavaScript',
     'React.js', 'Node.js', 'Express.js',
@@ -43,6 +61,27 @@ const About = ({ id = 'about' }) => {
             Professional web development company specializing in modern websites and web applications. We build scalable, polished digital experiences with a strong focus on performance, design, and reliability.
           </p>
         </motion.div>
+
+        <motion.div
+          initial={{ opacity: 0, y: 35 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+          className="grid gap-4 md:grid-cols-3 mb-12"
+        >
+          <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 text-center shadow-[0_25px_60px_rgba(15,23,42,0.2)] backdrop-blur-xl">
+            <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Age</p>
+            <p className="mt-4 text-3xl font-semibold text-white">{age} Years</p>
+          </div>
+          <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 text-center shadow-[0_25px_60px_rgba(15,23,42,0.2)] backdrop-blur-xl">
+            <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Location</p>
+            <p className="mt-4 text-3xl font-semibold text-white">Chennai, India</p>
+          </div>
+          <div className="rounded-3xl border border-white/10 bg-slate-950/60 p-6 text-center shadow-[0_25px_60px_rgba(15,23,42,0.2)] backdrop-blur-xl">
+            <p className="text-sm uppercase tracking-[0.35em] text-slate-400">Role</p>
+            <p className="mt-4 text-3xl font-semibold text-white">Software Developer</p>
+          </div>
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
